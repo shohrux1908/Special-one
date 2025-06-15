@@ -1,68 +1,15 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohlaroyim uchun lolalar</title>
-    <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/babel-standalone@7.22.5/babel.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mohlaroyim uchun</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
-<body class="bg-gradient-to-b from-pink-100 to-purple-200 min-h-screen flex items-center justify-center">
-    <div id="root"></div>
-    <script type="text/babel">
-        function App() {
-            const [showMessage, setShowMessage] = React.useState(false);
-
-            return (
-                <div className="text-center p-4 max-w-md mx-auto">
-                    <h1 className="text-4xl font-bold text-pink-600 mb-4 animate-bounce">
-                        Mohlaroyim
-                    </h1>
-                    <p className="text-lg text-gray-700 mb-6">
-                        Bu sahifa sen uchun, chunki sen lolalarni juda yaxshi ko‘rasan! 🌷
-                    </p>
-                    <div className="relative">
-                        <img 
-                            src="https://images.unsplash.com/photo-1589994965851-a8f43a9d9397?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" 
-                            alt="Lolalar" 
-                            className="rounded-lg shadow-lg mb-4 mx-auto"
-                        />
-                        <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                            <p className="text-white text-lg font-semibold bg-pink-500 bg-opacity-75 p-2 rounded">
-                                Sen uchun eng chiroyli lolalar!
-                            </p>
-                        </div>
-                    </div>
-                    <button 
-                        onClick={() => setShowMessage(!showMessage)}
-                        className="bg-pink-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-pink-600 transition duration-300"
-                    >
-                        {showMessage ? "Xabarni yashirish" : "Maxsus xabar"}
-                    </button>
-                    {showMessage && (
-                        <div className="mt-4 p-4 bg-white rounded-lg shadow-lg animate-fade-in">
-                            <p className="text-gray-800 text-lg">
-                                Mohlaroyim, sen mening dunyomdagi eng chiroyli lola kabi noyobsan. 🌷
-                                Har bir lola sening tabassumingni eslatadi!
-                            </p>
-                        </div>
-                    )}
-                </div>
-            );
-        }
-
-        ReactDOM.render(<App />, document.getElementById('root'));
-    </script>
-    <style>
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in {
-            animation: fadeIn 0.5s ease-in-out;
-        }
-    </style>
+<body>
+  <canvas id="fireworks"></canvas>
+  <div class="centered-text">Mohlaroyim</div>
+  <script src="script.js"></script>
 </body>
 </html>

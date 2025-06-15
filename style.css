@@ -1,0 +1,33 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    background: radial-gradient(circle at center, #ffe6f0 0%, #ffcce0 100%);
+    font-family: 'Great Vibes', cursive;
+  }
+  
+  .centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 64px;
+    color: #fff;
+    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493;
+    z-index: 10;
+    animation: fadeIn 3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    0%   { opacity: 0; transform: translate(-50%, -60%); }
+    100% { opacity: 1; transform: translate(-50%, -50%); }
+  }
+  
+  canvas#fireworks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+  }
+  
